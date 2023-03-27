@@ -13,5 +13,13 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+        // GET: Mascot
+        public ActionResult mascot()
+        {
+            return View();
+        }
+
+
     }
+
 }
