@@ -14,12 +14,31 @@ namespace WebApplication1.Controllers
             return View();
         }
         // GET: Mascot
-        public ActionResult mascot()
+        public ActionResult Mascot()
         {
             return View();
         }
 
-
+        // GET: About
+        public ActionResult About()
+        {
+            return View();
+        }
+        // GET: Recipe
+        public ActionResult Recipe()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult Blog()
+        {
+            return View();
+        }
+        // GET: Contact
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 
 }
