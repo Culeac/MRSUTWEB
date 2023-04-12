@@ -5,23 +5,27 @@
     @using System.Web.Optimization
     @Styles.Render("~/bundles/css")
 
-    <style>
-    body {
-    background-color: #333333;
-    }
-    </style>
+
+   
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <script src="~/Content/custom.js"></script>
+    <script src="~/Content/jquery-3.0.0.min.js"></script>
+    <script src="~/Content/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/Content/jquery.min.js"></script>
+    <script src="~/Content/owl.carousel.min.js"></script>
+    <script src="~/Content/popper.min.js"></script>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    @Html.Partial("_LayoutNavBar")
 
-    <style>
-        body {
-            background-color: #333333;
-        }
-    </style>
     <div>
         @RenderBody()
     </div>
+    @Html.Partial("_LayoutFooter")
 </body>
 </html>

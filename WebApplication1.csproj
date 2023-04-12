@@ -125,8 +125,37 @@
     <Content Include="Content\jquery.min.js" />
     <Content Include="Content\owl.carousel.min.js" />
     <Content Include="Content\popper.min.js" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\owl.carousel.min.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\style.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\-2.jpg" />
+    <Content Include="images\about-img.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\blog_img1.png" />
+    <Content Include="images\blog_img2.png" />
+    <Content Include="images\blog_img3.png" />
+    <Content Include="images\burger_slide.png" />
+    <Content Include="images\client.jpg" />
+    <Content Include="images\client_icon.png" />
+    <Content Include="images\icon.jpg" />
+    <Content Include="images\img.jpg" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\location_icon.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo1.jpg" />
+    <Content Include="images\mail_icon.png" />
     <Content Include="images\mascot.gif" />
+    <Content Include="images\menu_icon.png" />
+    <Content Include="images\phone_icon.png" />
+    <Content Include="images\rs1.png" />
+    <Content Include="images\rs2.png" />
+    <Content Include="images\rs3.png" />
+    <Content Include="images\rs4.png" />
+    <Content Include="images\rs5.png" />
+    <Content Include="images\search_icon.png" />
+    <Content Include="images\title.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -169,7 +198,6 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Views\Home\mascot.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\index.cshtml" />
     <Content Include="Views\Shared\ViewStart.cshtml" />
@@ -177,6 +205,8 @@
     <Content Include="Views\Home\blog.cshtml" />
     <Content Include="Views\Home\contact.cshtml" />
     <Content Include="Views\Home\recipe.cshtml" />
+    <Content Include="Views\Shared\_LayoutNavBar.cshtml" />
+    <Content Include="Views\Shared\_LayoutFooter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
