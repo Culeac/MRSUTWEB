@@ -76,7 +76,6 @@
 
             <div id="content">
                 <!-- header -->
-                
                 <!-- end header -->
 
                 <div class="yellow_bg">
@@ -198,7 +197,6 @@
 
 
                 <!-- footer -->
-                
                 <!-- end footer -->
 
             </div>
@@ -232,6 +230,39 @@
                 });
             });
         </script>
+
+        <script>
+            $(document).ready(function () {
+                var owl = $('.owl-carousel');
+                owl.owlCarousel({
+                    margin: 10,
+                    nav: true,
+                    loop: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 2
+                        },
+                        1000: {
+                            items: 5
+                        }
+                    }
+                })
+            })
+        </script>
+        </style>
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+        <link href="~/css/responsive.css" rel="stylesheet" />
+        <link href="~/css/style.css" rel="stylesheet" />
+        <script src="~/Content/custom.js"></script>
+        <script src="~/Content/jquery-3.0.0.min.js"></script>
+        <script src="~/Content/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="~/Content/jquery.min.js"></script>
+        <script src="~/Content/owl.carousel.min.js"></script>
+        <script src="~/Content/popper.min.js"></script>
 
         <script>
             $(document).ready(function () {
