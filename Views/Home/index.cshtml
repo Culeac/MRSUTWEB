@@ -54,19 +54,19 @@
                 <ul class="list-unstyled components">
 
                     <li class="active">
-                        <a href="/index">Home</a>
+                        <a href="@Url.Action("Index","Home")">Home</a>
                     </li>
                     <li>
-                        <a href="/home/about">About</a>
+                        <a href="@Url.Action("About","Home")">About</a>
                     </li>
                     <li>
-                        <a href="/home/recipe">Recipe</a>
+                        <a href="@Url.Action("Recipe","Home")">Recipe</a>
                     </li>
                     <li>
-                        <a href="/home/blog">Blog</a>
+                        <a href="@Url.Action("Blog","Home")">Blog</a>
                     </li>
                     <li>
-                        <a href="/contact">Contact Us</a>
+                        <a href="@Url.Action("Contact","Home")">Contact Us</a>
                     </li>
                 </ul>
 
@@ -413,7 +413,7 @@
     <script src="~/Content/owl.carousel.min.js"></script>
     <script src="~/Content/popper.min.js"></script>
 
-    <script>
+    <script>    
         $(document).ready(function () {
             var owl = $('.owl-carousel');
             owl.owlCarousel({

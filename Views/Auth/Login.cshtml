@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.Auth.LoginViewModel
+<div class="main-w3layouts wrapper mt-lg-1">
+    <div class="main-agileinfo">
+        <div class="agileits-top">
+            @using (Html.BeginForm("login", "auth", FormMethod.Post))
+            {
+                @Html.LabelFor(a => a.Username, new { @class = "text p-1", placeholder = "Username" })
+                @Html.TextBoxFor(a => a.Username, new { @class = "text p-1", placeholder = "Username" })
+                @Html.LabelFor(a => a.Password, new { @class = "text p-1", placeholder = "Password" })
+                @Html.PasswordFor(a => a.Password, new { @class = "text p-1", placeholder = "Password" })
+
+                <input type="submit" value="LOGIN">
+            }
+            <p>Don't have an Account? <a href="@Url.Action("register", "auth")"> Register Now!</a></p>
+        </div>
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</div>

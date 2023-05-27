@@ -1,0 +1,129 @@
+﻿<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif
+    }
+
+
+
+    .pic {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    .table thead {
+        background-color: #ffde10;
+    }
+
+        .table thead th {
+            padding: 30px;
+            font-size: 14px;
+            color: white;
+        }
+
+    .table tbody td input[type="checkbox"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: #eee;
+        position: relative;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .container .table-wrap {
+        margin: 20px auto;
+        overflow-x: auto
+    }
+
+        .container .table-wrap::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .container .table-wrap::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-image: linear-gradient(to right, #5D7ECD, #0C91E6);
+        }
+
+    .table > :not(caption) > * > * {
+        padding: 2rem 0.5rem;
+    }
+
+    ::placeholder {
+        color: black;
+        font-weight: 600;
+    }
+    
+
+    .table tbody td {
+        padding: 30px;
+        margin: 0;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+        .table tbody td .fa-times {
+            color: #ffde10;
+        }
+
+
+    .text-muted {
+        font-size: 18px;
+    }
+
+    .table tbody tr td:nth-of-type(3) {
+        min-width: 320px;
+    }
+
+    @@media(min-width: 992px) {
+        .container .table-wrap {
+            overflow: hidden;
+        }
+    }
+</style>
+
+@model IEnumerable<data.Models.Product>
+
+<div class="container">
+    <div class="table-wrap">
+        <table class="table table-responsive table-borderless">
+            <thead>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="align-middle alert border-bottom" role="alert">
+
+                        <td class="text-center">
+                            <img class="pic"
+                                 src="@item.ImageLink"
+                                 alt="">
+                        </td>
+                        <td>
+                            <div>
+                                <p class="m-0 fw-bold">@item.Name</p>
+                                <p class="m-0 text-muted">@item.Description</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="fw-600">$@item.Price</div>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" href="">Delete</a><!--get by ID and then delete @item.ID-->
+                            <a class="btn btn-success" href="">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

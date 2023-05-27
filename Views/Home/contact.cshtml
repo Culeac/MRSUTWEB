@@ -39,7 +39,9 @@
     <body class="main-layout Contact_page">
         <!-- loader  -->
         <div class="loader_bg">
-            <div class="loader"><img src="images/loading.gif" alt="" /></div>
+            <div class="loader">
+                <img src="~/images/loading.gif" />
+            </div>
         </div>
 
         <div class="wrapper">
@@ -77,10 +79,8 @@
 
             <div id="content">
                 <!-- header -->
-                
                 <!-- end header -->
                 <!-- footer -->
-               
                 <!-- end footer -->
 
             </div>
@@ -113,6 +113,42 @@
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
             });
+        </script>
+        </style>
+        <
+        </script>
+        </style>
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+        <link href="~/css/responsive.css" rel="stylesheet" />
+        <link href="~/css/style.css" rel="stylesheet" />
+        <script src="~/Content/custom.js"></script>
+        <script src="~/Content/jquery-3.0.0.min.js"></script>
+        <script src="~/Content/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="~/Content/jquery.min.js"></script>
+        <script src="~/Content/owl.carousel.min.js"></script>
+        <script src="~/Content/popper.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                var owl = $('.owl-carousel');
+                owl.owlCarousel({
+                    margin: 10,
+                    nav: true,
+                    loop: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 2
+                        },
+                        1000: {
+                            items: 5
+                        }
+                    }
+                })
+            })
         </script>
 
     </body>

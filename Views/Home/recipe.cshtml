@@ -38,7 +38,7 @@
     <body class="main-layout Recipes_page">
         <!-- loader  -->
         <div class="loader_bg">
-            <div class="loader"><img src="images/loading.gif" alt="" /></div>
+            <div class="loader"><img src="~/images/loading.gif"/></div>
         </div>
 
         <div class="wrapper">
@@ -76,7 +76,6 @@
 
             <div id="content">
                 <!-- header -->
-                
                 <!-- end header -->
 
                 <div class="yellow_bg">
@@ -101,7 +100,7 @@
 
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs1.png" alt="#" />
+                                            <img src="~/images/rs1.png" />
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>Homemade</h3>
@@ -110,7 +109,8 @@
                                     </div>
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs2.png" alt="#" />
+                                            
+                                            <img src="~/images/rs2.png" />
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>Noodles</h3>
@@ -119,7 +119,8 @@
                                     </div>
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs3.png" alt="#" />
+                                            <img src="~/images/rs3.png" />
+                                            
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>Egg</h3>
@@ -128,7 +129,8 @@
                                     </div>
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs4.png" alt="#" />
+                                            <img src="~/images/rs4.png" />
+                                         
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>Sushi Dizzy</h3>
@@ -137,7 +139,8 @@
                                     </div>
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs5.png" alt="#" />
+                                            <img src="~/images/rs5.png" />
+                                           
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>The Coffee Break</h3>
@@ -146,7 +149,8 @@
                                     </div>
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs1.png" alt="#" />
+                                            <img src="~/images/rs1.png" />
+                                            
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>Homemade</h3>
@@ -155,7 +159,8 @@
                                     </div>
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs2.png" alt="#" />
+                                            <img src="~/images/rs2.png" />
+                                            
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>Noodles</h3>
@@ -164,7 +169,8 @@
                                     </div>
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs3.png" alt="#" />
+                                            <img src="~/images/rs3.png" />
+                                          
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>Egg</h3>
@@ -173,7 +179,8 @@
                                     </div>
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs4.png" alt="#" />
+                                            <img src="~/images/rs4.png" />
+                                            
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>Sushi Dizzy</h3>
@@ -182,7 +189,8 @@
                                     </div>
                                     <div class="item">
                                         <div class="product_blog_img">
-                                            <img src="images/rs5.png" alt="#" />
+                                            <img src="~/images/rs5.png" />
+                                            
                                         </div>
                                         <div class="product_blog_cont">
                                             <h3>The Coffee Break</h3>
@@ -198,7 +206,6 @@
 
 
                 <!-- footer -->
-                
                 <!-- end footer -->
 
             </div>
@@ -232,6 +239,39 @@
                 });
             });
         </script>
+
+        <script>
+            $(document).ready(function () {
+                var owl = $('.owl-carousel');
+                owl.owlCarousel({
+                    margin: 10,
+                    nav: true,
+                    loop: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 2
+                        },
+                        1000: {
+                            items: 5
+                        }
+                    }
+                })
+            })
+        </script>
+        </style>
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+        <link href="~/css/responsive.css" rel="stylesheet" />
+        <link href="~/css/style.css" rel="stylesheet" />
+        <script src="~/Content/custom.js"></script>
+        <script src="~/Content/jquery-3.0.0.min.js"></script>
+        <script src="~/Content/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="~/Content/jquery.min.js"></script>
+        <script src="~/Content/owl.carousel.min.js"></script>
+        <script src="~/Content/popper.min.js"></script>
 
         <script>
             $(document).ready(function () {
