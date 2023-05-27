@@ -1,0 +1,36 @@
+﻿@model WebApplication1.Models.Auth.RegisterViewModel
+<div class="main-w3layouts wrapper mt-lg-1">
+    <div class="main-agileinfo">
+        <div class="agileits-top">
+            @using (Html.BeginForm("register", "auth", FormMethod.Post))
+            {
+
+                @Html.LabelFor(a => a.Username, new { @class = "text pt-1", placeholder = "Username" })
+                @Html.TextBoxFor(a => a.Username, new { @class = "text pt-1", placeholder = "Username" })
+                @Html.LabelFor(a => a.FullName, new { @class = "text pt-1", placeholder = "User Full Name" })
+                @Html.TextBoxFor(a => a.FullName, new { @class = "text pt-1", placeholder = "User Full Name" })
+                @Html.LabelFor(a => a.Email, new { @class = "text pt-1", placeholder = "Email" })
+                @Html.TextBoxFor(a => a.Email, new { @class = "text pt-1", placeholder = "Email" })
+                @Html.LabelFor(a => a.PhoneNumber, new { @class = "text pt-1", placeholder = "Phone number" })
+                @Html.TextBoxFor(a => a.PhoneNumber, new { @class = "text pt-1", placeholder = "Phone number" })
+                @Html.LabelFor(a => a.Password, new { @class = "text pt-1", placeholder = "Password" })
+                @Html.PasswordFor(a => a.Password, new { @class = "text pt-1", placeholder = "Password" })
+                @Html.LabelFor(a => a.ConfirmPassword, new { @class = "text pt-1", placeholder = "Confirm Password" })
+                @Html.PasswordFor(a => a.ConfirmPassword, new { @class = "text pt-1", placeholder = "Confirm Password" })
+                <input type="submit" value="SIGNUP">
+            }
+            <p>Do you have an Account? <a href="@Url.Action("login", "auth")"> Login Now!</a></p>
+        </div>
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</div>
