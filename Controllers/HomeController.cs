@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bussineslogic.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,14 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly UserService _userService;
+        private readonly ProductService _productService;
+
+        public HomeController()
+        {
+            _userService = new UserService();
+            _productService = new ProductService();
+        }
         // GET: Home
         public ActionResult Index()
         {
